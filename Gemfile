@@ -8,6 +8,8 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.4'
+# Bootstrap library
+gem 'bootstrap-sass', '3.3.7'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
@@ -19,6 +21,9 @@ gem 'bootstrap-will_paginate', '1.0.0'
 # Use haml template instead of erb
 # Read more: https://github.com/haml/haml
 gem 'haml'
+# Make haml as default template engine
+# https://github.com/indirect/haml-rails
+# gem 'haml-rails', '~> 0.9'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -30,9 +35,6 @@ gem 'coffee-rails', '~> 4.2'
 # Use faker to seed database
 # Read more: https://github.com/stympy/faker
 gem 'faker'
-# Use for pagination
-gem 'will_paginate',           '3.1.5'
-gem 'bootstrap-will_paginate', '1.0.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
