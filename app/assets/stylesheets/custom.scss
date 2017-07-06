@@ -12,17 +12,13 @@ h1 {
   text-align: center
 }
 
-h2 {
-  font-size: 1.2em;
-  letter-spacing: -1px;
-  margin-bottom: 30px;
-  text-align: center;
-  font-weight: normal
-}
-
 p {
   font-size: 1.1em;
   line-height: 1.7em
+}
+
+.box {
+  margin-bottom: 20px;
 }
 
 .box .box-header {
@@ -34,7 +30,8 @@ p {
 
 .box .box-body {
   background-color: #fcfcfc;
-  padding: 20px
+  padding: 20px;
+  min-height: 180px;
 }
 
 .box .box-body .price {
@@ -53,6 +50,6 @@ p {
   text-align: center
 }
 
-body {
-  padding-top: 50px
+h1 {
+  padding-top: 50px;
 }
