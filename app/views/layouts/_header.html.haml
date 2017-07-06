@@ -1,0 +1,19 @@
+%nav.navbar.navbar-inverse.navbar-fixed-top
+  .container
+    .navbar-header
+      %button.navbar-toggle.collapsed{'data-target' => '#cart_shopping_collapse', 'data-toggle' => 'collapse', 'type' => 'button', 'aria-expanded' => 'false'}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand
+        Cart shopping
+    #cart_shopping_collapse.collapse.navbar-collapse{'aria-expanded' => "false"}
+      %ul.nav.navbar-nav
+        %li
+          = link_to 'Home', root_path
+        %li
+          = link_to 'Producadd bookts', books_index_path
+      %ul.nav.navbar-nav.navbar-right
+        %li
+          = link_to 'Cart', edit_carts_path
