@@ -14,3 +14,14 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+function remove_fields(t) {
+    $(t).closest(".row").find('input').val("0");
+    // di nguoc cay DOM toi .box gan nhat
+    $(t).closest(".box").hide();
+}
+
+$(document).ajaxComplete(function (e, response) {
+    var message = JSON.parse(response.responseText);
+    alert(message.message)
+});
