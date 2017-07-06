@@ -1,0 +1,18 @@
+.col-md-3
+  .box
+    .box-header
+      = book.title
+    .box-body
+      %p= book.description
+      .price
+        %p
+          %b Price:
+          = "$#{book.price}"
+    .box-footter
+      = form_for @cart_books, remote: true do |f|
+        .row
+          .col-xs-6
+            = f.hidden_field :book_id, :value => book.id
+            = f.number_field :quantity, min: 1, value: 1, class: 'form-control'
+          .col-xs-6
+            = f.submit 'Add to cart', class: 'btn btn-success'

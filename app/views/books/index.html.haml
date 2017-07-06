@@ -1,0 +1,6 @@
+= render 'layouts/header'
+.container
+  %h1 All Books
+  .row
+    = render @books
+  = will_paginate @books, class: 'text-center'
