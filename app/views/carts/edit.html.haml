@@ -1,0 +1,26 @@
+= render 'layouts/header'
+.container
+  %h1 Cart
+  = form_for(@cart, url: {action: :update}, remote: true) do |f|
+    .row
+      = f.fields_for :cart_books do |ff|
+        .col-md-3
+          .box
+            .box-header
+              = ff.object.book.title
+            .box-body
+              %p
+                = ff.object.book.description
+              .price
+                %p
+                  %b Price:
+                  = "$#{ff.object.book.price}"
+            .box-footer
+              .row
+                .col-xs-6
+                  = ff.number_field :quantity, min: 0, class: 'form-control'
+                .col-xs-6
+                  = ff.button 'Remove', class: 'btn btn-danger', href: "#", onclick: "remove_fields(this);"
+    .footer
+      .btn.btn-warning= link_to 'Delete',url_for(action: :destroy,id: @cart.id),method: :delete, data: {confirm: "Are you sure?"}
+      = f.submit 'Save changes', class: 'btn btn-primary'
